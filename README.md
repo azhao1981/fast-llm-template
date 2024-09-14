@@ -24,7 +24,7 @@ cp .env.example .env
 # 初始化环境和安装 poetry
 build.sh
 # 载入环境
-. .env
+source .envrc
 # 验证
 which poetry
 
@@ -37,21 +37,25 @@ poetry run python main.py
 ```
 
 ### 项目环境:
+
 ```bash
-. .envrc
+source .envrc
 uv pip install -r uv.poetry.txt
 uv pip install -r requirements.txt
 ```
 
-
 ## QA
 
-1 变量 VENV_ROOT VENV_PATH 用来干什么
+1 变量 PYTHON_PATH VENV_ROOT VENV_PATH 用来干什么
 
 ```bash
+PYTHON_PATH=~/.py/python311/
 VENV_ROOT=~/.py/venvs/
 VENV_PATH=~/.py/venvs/llm
 ```
+
+PYTHON_PATH 如果.env中有指定 python 目录，则使用指定的 python 目录 -p
+
 VENV_ROOT 为了把所有的虚拟环境放在一个公共目录下，方便管理。不设置默认为项目目录
 
 VENV_PATH 为了指定当前项目的虚拟环境的位置。默认为 VENV_ROOT/.项目名

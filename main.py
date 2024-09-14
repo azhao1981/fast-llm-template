@@ -16,5 +16,6 @@ def read_root(name: str = Query(...)):
     request = hello.dao.HelloRequest(name=name)
     return hello.do.get_ip(request)
 
+
 if __name__ == "__main__":
     uvicorn.run_server()
