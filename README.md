@@ -1,5 +1,13 @@
 # fast-llm-template
 
+一个简单的基于 fast-api 的 llm 模板
+
+## 技术栈
+
+langchain + openai
+
+fastapi + uvicorn + poetry + uv
+
 ## env
 
 uv + poetry
