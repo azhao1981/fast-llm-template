@@ -2,6 +2,14 @@
 
 一个简单的基于 fast-api 的 llm 模板
 
+## 目录
+
+- main.py 主程序
+- app 业务逻辑
+- ai  ai 助手相关
+- log 日志
+- tests 测试
+
 ## 技术栈
 
 langchain + openai
