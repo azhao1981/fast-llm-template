@@ -1,2 +1,2 @@
-source ~/.py/venvs/llm/bin/activate
+source .venv/bin/activate
 source .env
